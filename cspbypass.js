@@ -1,4 +1,4 @@
-export default function cspEval(js) {
+function cspEval(js) {
     var script = document.createElement("script")
 
     // No Blob ? No CSP !
@@ -14,5 +14,7 @@ export default function cspEval(js) {
     document.readyState === "complete" ? callback() : window.onload = callback
 
 }
+
+export { cspEval };
 
 cspEval("console.log('Bypass CSP unsafe-eval')")
