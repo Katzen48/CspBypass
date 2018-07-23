@@ -1,4 +1,4 @@
-function cspEval(js) {
+export default function cspEval(js) {
     var script = document.createElement("script")
 
     // No Blob ? No CSP !
